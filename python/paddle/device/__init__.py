@@ -721,8 +721,10 @@ class Stream:
     def synchronize(self):
         '''
         Wait for all the kernels in this stream to complete.
+        
         Returns:
             None.
+            
         Examples:
             .. code-block:: python
 
@@ -759,12 +761,15 @@ class Stream:
 def current_stream(device=None):
     '''
     Return the current stream by the device.
+    
     Parameters:
         device(str|paddle.CUDAPlace(n)|paddle.CustomPlace(n)): The device which want to get stream from.  If device is None, the device is the current device. Default: None.
             It can be ``gpu``, ``gpu:x``,``custom_device``, ``custom_device:x``, where ``custom_device`` is the name of CustomDevicec,
             where ``x`` is the index of the GPUs, CustomDevicecs. And it can be paddle.CUDAPlace(n) or paddle.CustomPlace(n).
+            
     Returns:
         Stream: The stream to the device.
+        
     Examples:
         .. code-block:: python
 
